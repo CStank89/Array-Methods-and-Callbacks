@@ -41,14 +41,18 @@ console.log(getFinals(fifaData));
 
 function getYears(cb) {
     let years = []
-    cb.forEach(function(item){
-        years.push(item.Year)
-    });
+    cb.forEach (item => years.push(item.Year));   
     return years;
 };
-console.log(getYears(getFinals));
+console.log(`result of get years: ${getYears(getFinals(fifaData))}`);
 
 
+// const years = cb.map(year => {
+//     return {'Year': year.Year};
+//         });
+    
+// };
+// console.log(getYears(getFinals);
 
 /* Task 4: Implement a higher-order function called `getWinners`, that accepts the callback function `getFinals()` and determine the winner (home or away) of each `finals` game. Return the name of all winning countries in an array called `winners` */ 
 
@@ -78,7 +82,7 @@ Parameters:
  */
 
  function getWinnersByYear(callback, callback2) {
-     for (let i = 0; i < cb.length; i++){
+     for (let i = 0; i < c.length; i++){
         console.log(`In ${callback2[i]['Year']}, ${callback[i]} won the world cup!`);
      }
 
